@@ -1,0 +1,12 @@
+//## Bootstrap
+//
+// Core bootstrap variables and mixins
+@import "./colors";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+$direction: 'ltr' !default;
+$theme-style: 'square' !default;
+$theme-type: 'default' !default;
+@import '../../../css/default-variables.scss';
+@import "./_bootstrap-override";

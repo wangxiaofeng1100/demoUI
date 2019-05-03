@@ -1,0 +1,45 @@
+// ## Define colors
+// # System basic colors
+$platform-color-white: #FFF!default;
+$platform-color-white-smoke: #f5f5f5;
+$platform-color-grey: #EEE!default;
+$platform-color-dark-grey: #CCC!default;
+$platform-color-red-grey: #444!default;
+$platform-color-black: #000;
+$platform-color-navy: #3f444a;
+$platform-color-navy-light: #677581;
+$platform-color-navy-red-light: #f4f0eb;
+$platform-color-navy-lighter:#b7c0ce;
+$platform-color-hover-default:#2B7C90;
+// ------------------------------------------
+// # Primar kigland color palette
+// Logo / bar only
+$platform-color-pantone-2935c: #005BBB!default;
+// Main background color
+$platform-color-pantone-309c: #003D4C!default;
+$platform-color-pantone-7533c: #4A3C31!default;
+$platform-color-pantone-black7c: #363534!default;
+$platform-color-pantone-7459c: #3095B4!default;
+$platform-color-pantone-424c: #6C6F70!default;
+$platform-color-pantone-550c: #8CB8C6!default;
+$platform-color-pantone-402c: #A9A39B!default;
+$platform-color-pantone-124c: #EAAB00!default;
+$platform-color-pantone-warmgrey1c: #E0DED8!default;
+$platform-color-pantone-warmgrey1c-light: lighten($platform-color-pantone-warmgrey1c, 30%) !default;
+// # Special-use colors
+// Infographic support
+$platform-color-pantone-7473c: #1E9D8B!default;
+// Infographic support
+$platform-color-pantone-7472c: #5BBBB7!default;
+// Problem only
+$platform-color-pantone-187c: #9F1F1F!default;
+// Problem only
+$platform-color-pantone-1795c: #CF2424!default;
+// Problem only
+$platform-color-pantone-171c: #E14C38!default;
+// Problem only
+$platform-color-pantone-164c: #EE7A51!default;
+// # Limit use - for smallest proportion only
+$platform-color-purple: #574F7F!default;
+$platform-color-pink: #A05C93!default;
+$platform-color-green: #43803C!default;

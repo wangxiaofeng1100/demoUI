@@ -1,0 +1,26 @@
+<div class="welcome-page">
+  <table class="demo-table">
+    <thead>
+      <tr>
+        <td>Username</td>
+        <td>Birthday</td>
+        <td>Description</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{user.username}}</td>
+        <td>{{formateDate(user.birthday)}}</td>
+        <td>{{user.description}}</td>
+        <td>
+          <button class="button demo-button" (click)="removeUser(user.id)">Delete</button>
+          <button class="button demo-button">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button class="button demo-button" (click)="addNewUser()">Add New user</button>
+  </div>
+</div>

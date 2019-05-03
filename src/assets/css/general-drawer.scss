@@ -1,0 +1,91 @@
+/**
+ * Created Date: Sunday, December 3rd 2017, 11:49:33 pm
+ * Author: KSC
+ * Copyright (c) 2017 Kingland System Corporation. All Rights Reserved
+ */
+ .drawer-header {
+    height: 42px;
+    background-color: #6c6f70;
+    > div.ksc-resize-drawer {
+        height: 5px;
+        cursor: n-resize;
+    }
+    div.drawer-title,
+    div.drawer-toolbar {
+        display: inline-block;
+        font-size: 18px;
+        padding: 2px 15px 4px 15px;
+        div.drawer-tool-icon {
+            color: white;
+            cursor: pointer;
+            &.icon-boader {
+                background-color: #3095b4;
+                border-color: #e1e5ec;
+                height: 30px;
+                width: 30px;
+                text-align: center;
+                padding-left: 0;
+                padding-right: 0;
+                vertical-align: middle;
+                > .fa {
+                    font-size: 18px;
+                    margin-top: 8px;
+                }
+                &:hover,
+                &.active {
+                    background-color: #E9B413;
+                }
+            }
+
+            &.resize-icon {
+                padding-left: 12px;
+            }
+            &.fullscreen {
+                padding-left: 12px;
+                font-size: 12px;
+                font-family: FontAwesome;
+                &:before {
+                    content: "\f065";
+                }
+
+                &.on {
+                    &:before {
+                        content: "\f066";
+                    }
+                }
+            }
+        }
+    }
+    div.drawer-title {
+        color: #eaab00;
+    }
+    div.drawer-toolbar {
+        float: right;
+        line-height: 0;
+        div {
+            display: inline-block;
+        }
+    }
+}
+
+.drawer-body {
+    height: calc(100% - 42px);
+    background-color: #F5F5F5;
+    overflow: auto;
+    >div{
+        padding-top: 6px;
+    }
+}
+
+.ksc-drawer-opened {
+    .resize-icon:before {
+        content: '\f107';
+    }
+}
+
+.ksc-drawer-closed {
+    .resize-icon:before {
+        content: '\f106';
+    }
+}
+

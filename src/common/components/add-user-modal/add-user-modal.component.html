@@ -1,0 +1,38 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add New User</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group row spbrow data-pointer-row">
+        <div class="col-xs-4">
+          <label class="datafabric-font-style">Username</label>
+        </div>
+        <div class="col-xs-8">
+          <input type="text" class="form-control" [(ngModel)]="newUser.username"/>
+        </div>
+      </div>
+      <div class="form-group row spbrow data-pointer-row">
+        <div class="col-xs-4">
+          <label class="datafabric-font-style">Birthday</label>
+        </div>
+        <div class="col-xs-8">
+          <datepicker [(ngModel)]="newUser.birthday"></datepicker>
+        </div>
+      </div>
+      <div class="form-group row spbrow data-pointer-row">
+        <div class="col-xs-4">
+          <label class="datafabric-font-style">Description</label>
+        </div>
+        <div class="col-xs-8">
+          <input type="text" class="form-control" [(ngModel)]="newUser.description"/>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer remove-role-confirm-modal">
+        <button class="btn btn-ok datafab-btn-primary" (click)="saveUser()">Add</button>
+        <button class="btn datafab-btn-secondary" (click)="bsModalRef.hide()"> Cancel </button>
+    </div>
+</div>

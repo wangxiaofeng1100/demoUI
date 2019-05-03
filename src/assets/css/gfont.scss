@@ -1,0 +1,47 @@
+/* Source Sans Pro */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url("/assets/font/SourceSansPro-Light.ttf") format('woff2'), url("/assets/font/SourceSansPro-Light.eot") format('woff');
+}
+/* Source Sans Pro */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url("/assets/font/SourceSansPro-Regular.ttf") format('woff2'), url("/assets/font/SourceSansPro-Regular.eot") format('woff');
+}
+/* Source Sans Pro bold*/
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url("/assets/font/SourceSansPro-Bold.ttf") format('woff2'), url("/assets/font/SourceSansPro-Bold.eot") format('woff');
+}
+/* Source Sans Pro semi bold*/
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url("/assets/font/SourceSansPro-Semibold.ttf") format('woff2'), url("/assets/font/SourceSansPro-Semibold.eot") format('woff');
+}
+/* TradeGothicCondensed18
+ * note: the 'woff' can support IE 11 good
+ */
+@font-face {
+  font-family: "TradeGothicCondensed18";
+  src: local('Trade Gothic LT Std Cn'), local('TradeGothicLTStd-Cn18'), url("/assets/font/TradeGothicLTStd-Cn18.woff") format("woff"), url("/assets/font/TradeGothicLTStd-Cn18.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ElegantIcons
+ * note: the 'woff' can support IE 11 good
+ */
+ @font-face {
+  font-family: "ElegantIcons";
+  src: local('ElegantIcons'), local('ElegantIcons'), url("/assets/font/ElegantIcons.woff") format("woff"), url("/assets/font/ElegantIcons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

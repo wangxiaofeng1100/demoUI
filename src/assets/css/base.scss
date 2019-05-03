@@ -1,0 +1,970 @@
+@import "./gfont.scss";
+@import "./default-variables.scss";
+// 1. Class name should follow the format of [namespace]-[type]-[class-name];
+//   1.1 [namespace] should be the current page or widget or application name;
+//   1.2 [type] indicate the style used for which type element or section;
+//     1.2.1 Some type mapping:
+//           ly: layout
+//           btn: button
+//           div: div
+//           text: div/span/label/p..., which display the text
+//
+//   1.3 [class-name] should be a reasonable name for style;
+//   Ex: dashboard-ly-none-padding
+// 2. Attributes in CSS such as color, font, length and height will use variables to fit the guide book of Platform UI
+//    When design a CSS style with belowing items, please check guide book first
+@mixin container-panle {
+  width: 100%;
+  padding: 5px 5px 5px 11px;
+  background-color: #E0DED8;
+  margin: 0px 0px 5px 0px;
+}
+
+table.dataTable thead th.sorting,
+table.dataTable thead th.sorting_desc,
+table.dataTable thead th.sorting_asc{
+    padding-right: 25px;
+}
+
+html {
+  font-family: $global-font-family !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: $global-font-size !important;
+  background-color: $platform-color-pantone-309c !important;
+}
+
+// ## Global layout
+.global-ly-none-scroll-y {
+  overflow-y: hidden !important;
+}
+
+.global-ly-vertical-align-middle {
+  vertical-align: middle;
+}
+
+.global-ly-h-padding-none {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.global-ly-v-padding-none {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.global-ly-v-margin-none {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+// ## Global text
+.global-text-default-size {
+  font-size: $global-font-size !important;
+}
+.global-text-default-font {
+  font-family: $global-font-size !important;
+}
+.global-text-align-center {
+  text-align: center !important;
+}
+
+.global-text-align-left {
+  text-align: left !important;
+}
+
+.global-text-align-right {
+  text-align: right !important;
+}
+
+.global-text-font-italic {
+  font-style: italic;
+}
+
+.global-text-font-normal {
+  font-style: normal !important;
+}
+
+.global-text-highlight {
+  font-weight: bold !important;
+}
+
+.global-text-weight-normal {
+  font-weight: normal !important;
+}
+
+.global-text-font-bold {
+  font-weight: bold;
+}
+
+.global-text-font-semibold {
+  font-weight: $global-font-weight-semibold;
+}
+
+.global-text-font-regular {
+  font-weight: $global-font-weight-regular;
+}
+
+.global-text-font-light {
+  font-weight: lighter;
+}
+
+.global-h0,
+.global-h1,
+.global-h2,
+.global-h3,
+.global-h4,
+.global-h5,
+.global-h6,
+.global-h7,
+.global-h8,
+.global-h9,
+.global-h10,
+.global-header-text,
+.global-text {
+  font-family: $global-font-family !important;
+  font-weight: $global-font-weight-default;
+  font-size: $global-font-size;
+}
+
+/* Overwrite all bootstrap font size below */
+.table td, .table th, .form-control { font-size: 12px !important; }
+
+/* FOR IE TO REMOVE X ICON IN THE INPUT */
+.table .form-control::-ms-clear { display: none; }
+
+/*
+ * overwrite bootstrap-switch
+ */
+ .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+ .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+   color: $platform-color-white !important;
+   background: #87A1B0 !important;
+ }
+
+ .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
+ .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+   color: #404040 !important;
+   background: #D9D8D8 !important;
+ }
+
+ .bootstrap-switch.bootstrap-switch-focused {
+   box-shadow: none !important;
+   border-color: #E5E5E5 !important;
+ }
+
+/*
+ * Overwrite label
+ */
+ .label-success {
+  background-color: $global-lb-color-success;
+}
+
+.datafab-white-cl-im {
+  color: #FFFFFF !important;
+}
+
+/** max width **/
+.datafabric_word_break {
+    max-width: 150px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.datafabric_word_break_255 {
+    max-width: 255px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// ANIMATION FOR WEBKIT
+@-webkit-keyframes right-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes left-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes up-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bottom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    /*-webkit-transform: translateY(100%);*/
+  }
+
+  100% {
+    opacity: 1;
+    /*-webkit-transform: translateY(0);*/
+  }
+}
+
+@-webkit-keyframes turn-over {
+  0% {
+    opacity: 0;
+    transform: rotateX(-180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(-360deg);
+  }
+}
+
+// ANIMATION FOR FIREFOX
+@-moz-keyframes right-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes left-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes up-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes bottom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes turn-over {
+  0% {
+    opacity: 0;
+    transform: rotateX(-180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(-360deg);
+  }
+}
+
+// ANIMATION FOR IE
+@keyframes right-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes left-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes up-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes bottom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes turn-over {
+  0% {
+    opacity: 0;
+    transform: rotateX(-180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(-360deg);
+  }
+}
+
+// COMMON ANIMATION
+.animation-right-in {
+  -webkit-animation-name: right-in; /* Safari and Chrome */
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-name: right-in; /* IE and Firefox */
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+.animation-left-in {
+  -webkit-animation-name: left-in;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+}
+
+.animation-up-in {
+  -webkit-animation-name: up-in;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+}
+
+.animation-bottom-in {
+  -webkit-animation-name: bottom-in;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+}
+
+.animation-fade-in {
+  -webkit-animation-name: fade-in; /* Safari and Chrome */
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-name: fade-in; /* IE and Firefox */
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+/* ANIMATION FOR TABLE */
+.animation-table tbody tr {
+  -webkit-animation-name: fade-in; /* Safari and Chrome */
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-name: fade-in; /* IE and Firefox */
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+.page-container-bg-solid .page-content-wrapper .page-content .fade-in-up .datafab-dashboard-panel {
+  @include container-panle
+}
+
+.module-main-title {
+  font-size: $global-sidebar-font-size;
+  font-weight: $global-font-weight-regular
+}
+
+.btn {
+  font-size: $global-font-size !important;
+  font-family: $global-font-family !important;
+  border-radius: $general-border-radius !important;
+}
+
+.datafab-btn-primary {
+  background-color: $global-bg-color-warm-green !important;
+  color: $platform-color-white !important;
+  border-color: $global-bg-color-warm-green !important;
+  border-width: 1px;
+  min-width: $global-btn-width-default;
+  padding: 4px 8px;
+  font-size: 12px !important;
+  &:hover{
+    background-color: $global-bg-color-dark !important;
+    color: $platform-color-white !important;
+    border-color: $global-bg-color-light-dark !important;
+  }
+  &.btn[disabled]:hover {
+    background-color: $global-bg-color-warm-green !important;
+    color: $platform-color-white !important;
+    border-color: $global-bg-color-warm-green !important;
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+  &:focus {
+    color: $platform-color-white !important;
+  }
+}
+
+.datafab-btn-secondary {
+    background-color: $platform-color-white !important;
+    color: $platform-color-black !important;
+    border: 1px solid $platform-color-dark-grey !important;
+    min-width: $global-btn-width-default;
+    padding: 4px 8px;
+    font-size: 12px !important;
+    &:hover{
+      background-color: $platform-color-dark-grey !important;
+    }
+}
+
+.datafab-h0,
+.datafab-h1,
+.datafab-h2,
+.datafab-h3,
+.datafab-h4,
+.datafab-h5,
+.datafab-h6,
+.datafab-h7,
+.datafab-h8,
+.datafab-h9,
+.datafab-h10,
+.datafab-header-text,
+.datafab-text {
+  font-family: "Source Sans Pro" !important;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.datafab-font-12 {
+    font-family: "Source Sans Pro" !important;
+    font-size: 12px;
+}
+
+.datafab-font-14 {
+    font-family: "Source Sans Pro" !important;
+    font-size: 14px;
+}
+.datafab-font-16 {
+    font-family: "Source Sans Pro" !important;
+    font-size: 16px;
+}
+
+.select2-dropdown {
+  z-index: 10050 !important;
+}
+
+// override bootbox css
+.bootbox {
+  .modal-content {
+    border-radius: 0px !important;
+    .bootbox-body {
+      font-size: 12px !important;
+      .bootbox-close-button {
+        margin-top: 0px !important;
+      }
+    }
+  }
+}
+
+.spinner {
+  z-index: $zindex-top !important;
+}
+
+.grid-stack-item-content{
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+ .table {
+  tr, td, th{
+    white-space: nowrap;
+   }
+
+ }
+
+.container-fluid{
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+.margin-right {
+  float: right;
+}
+
+.task-label-claimed {
+    background-color: #3095B4;
+    padding: 5px; color: white;
+    font-size: 12px !important;
+    width: 80px !important;
+    display: inline-block;
+    text-align: center;
+}
+
+.task-label-completed {
+  background-color: #1E9D8B;
+  padding: 5px; color: white;
+  font-size: 12px !important;
+  width: 80px !important;
+  display: inline-block;
+  text-align: center;
+}
+
+.task-label-cancelled {
+   background-color: #CF2424;
+   padding: 5px; color: white;
+   font-size: 12px !important;
+   width: 80px !important;
+   display: inline-block;
+   text-align: center;
+}
+
+.task-label-unclaimed {
+  background-color: #EAAB00;
+  padding: 5px; color: white;
+  font-size: 12px !important;
+  width: 80px !important;
+  display: inline-block;
+  text-align: center;
+}
+
+.none-vertical-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.none-horizontal-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.none-vertical-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.none-horizontal-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+
+.dataTables_wrapper {
+    .dataTables_paginate {
+      float: left !important;
+      text-align: left !important;
+      padding-top: 0.25em;
+      .pagination {
+        li {
+            a {
+            margin: -2px !important;
+            color: #337AB7;
+            &:hover {
+                color: #333333 !important;
+                background-color: #E0DED8;
+                border-color: #adadad;
+            }
+            }
+        }
+        .active {
+            a {
+            color: #FFFFFF!important;
+            background-color: #337AB7 !important;
+            border-color: #337AB7 !important;
+            &:hover {
+                color: #333333 !important;
+                background-color: #E0DED8 !important;
+                border-color: #adadad !important;
+            }
+            }
+        }
+        .disabled {
+            a {
+            color: #BEBEBE !important;
+            &:hover {
+                color: #333333 !important;
+                background-color: #E0DED8;
+                border-color: #adadad;
+            }
+            }
+        }
+    }
+      .paginate_button {
+        padding: 0px !important;
+        margin: 0px !important;
+      }
+    }
+  }
+
+
+.dataTables_paginate {
+  &.paging_simple_numbers {
+    float: left !important;
+  }
+}
+
+.dropdown-menu {
+  font-size: 12px !important;
+}
+
+.dataTables_wrapper.no-footer {
+  .dataTables_scrollBody {
+    border-bottom: none !important;
+  }
+}
+
+// highlight item color.
+.datafab-sidebar-menu.page-sidebar {
+    .page-sidebar-menu {
+        cursor: pointer;
+        > li.active {
+            > a {
+                background: #EAAB00 !important;
+            }
+        }
+    }
+}
+
+table.datafab-items-table {
+    tbody{
+        tr {
+            cursor: pointer;
+        }
+        tr.active-selected-item {
+            td {
+                background: #EAAB00 !important;
+            }
+        }
+    }
+}
+
+
+.table {
+    thead,
+    tbody,
+    tfoot {
+        tr {
+            th,
+            td {
+                padding: 8px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.table {
+    thead,
+    tbody {
+        tr {
+            background-color: #FFFFFF;
+        }
+    }
+}
+
+.datafab-table-hover {
+    tbody {
+        tr {
+            &:hover {
+                background-color: #E8F1F4 !important;
+            }
+        }
+    }
+}
+
+.datafab-table-striped {
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: #FFFFFF;
+                color: #404040;
+            }
+            &:nth-child(even) {
+                background-color: #F4F0EB;
+                color: #404040;
+            }
+        }
+    }
+}
+
+.datafab-table-head-gray {
+    thead {
+        tr {
+            background-color: #F4F0EB !important;
+        }
+    }
+}
+
+.dataTables_length {
+    float: right !important;
+    margin: 10px 0px;
+}
+
+div.btn.btn-icon-disabled, i.btn.btn-icon-disabled {
+    pointer-events: none !important;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.spbrow {
+    margin-top: 6px !important;
+}
+
+.height-50 { height: 50px; }
+
+.requiredField span:after {
+    color: red;
+    content: ' *';
+    display:inline;
+}
+.span-horizontal {
+    padding-top: 7px;
+}
+
+.page-content {
+    .panel {
+        .panel-body {
+            font-size: 12px !important;
+        }
+    }
+}
+
+.modal-title {
+    font-size: 16px;
+    font-weight: normal;
+}
+.model-accordion-title {
+    font-size: 12px;
+}
+.panel .panel-body {
+    font-size: 12px !important;
+}
+
+.datafab-page-header-text {
+    font-size: 20px !important;
+}
+.permission-deny {
+    display: none !important;
+}
+
+div.drawer-header {
+    div.drawer-title-bar {
+        div.drawer-title {
+            font-size: 14px;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+    }
+}
+
+.config-content {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 6px;
+    }
+    .sidebar-search-input {
+        padding-top: 6px;
+        .dataTables_filter {
+            width: 100%;
+            label {
+                width: 100%;
+                input{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+span.has-error {
+    color: #b50000;
+}
+
+div.block-ui-spinner{
+    div.loader, div.loader:after {
+        border-radius: 50% !important;
+    }
+}
+
+.rule-execution-modal {
+    .fa-square-o {
+        color: #363534;
+    }
+    .fa-refresh {
+        color: #363534;
+    }
+    .fa-check-square-o {
+        color: #1e9d8b;
+    }
+    .fa-minus-square-o {
+        color: #9f1f1f;
+    }
+    .fa-warning {
+        color: #e14c38;
+    }
+    .fa-info {
+        color: #eaab00;
+    }
+    .fa-ban {
+        color: #6c6f70;
+    }
+    .row {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .modal-body {
+        max-height: 430px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    width: 70% !important;
+    .res-rules.row {
+        border: none;
+    }
+    .res-rules.row {
+        border: none;
+    }
+}
+
+#advanceSearch span > b {
+    font-size: 16px;
+}
+
+.popover-title a.restore-btn {
+    font-size: 12px;
+}
+
+.container-fluid {
+    padding: 6px 6px 0px 6px !important;
+}
+
+/*
+ * <Description>
+ * @Usage: Add align right to button container and 6px right margin for every buttons in container except the last one.
+ * @Example: <div class="datafabric-btns-container text-right"><button class="btn"></button> <button class="btn"></button> ...</div>
+*/
+.datafabric-btns-container.text-right {
+    text-align: right;
+    .btn {
+        margin: 0px !important;
+    }
+    .btn:not(:last-child) {
+        margin-right: 6px !important;
+    }
+}
+
+.width-80 {
+    width: 80px;
+}
