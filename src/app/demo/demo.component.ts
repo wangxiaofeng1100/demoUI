@@ -1,15 +1,16 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {UserHttpService} from "../../common/services/http/user-http.service";
-import {BsModalRef, BsModalService} from "ngx-bootstrap";
-import {AddUserModalComponent} from "../../common/components/add-user-modal/add-user-modal.component";
-import * as moment from "moment";
+import {UserHttpService} from '../../common/services/http/user-http.service';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
+import {AddUserModalComponent} from '../../common/components/add-user-modal/add-user-modal.component';
+import * as moment from 'moment';
+
 @Component({
-    selector: 'demo-app',
-    templateUrl: './demo.component.html',
-    styleUrls: ['demo.component.scss'],
-    providers: [UserHttpService, BsModalRef, BsModalService]
+  selector: 'app-demo',
+  templateUrl: './demo.component.html',
+  styleUrls: ['demo.component.scss'],
+  providers: [UserHttpService, BsModalRef, BsModalService]
 })
-export class DemoComponent implements OnInit{
+export class DemoComponent implements OnInit {
   userList = [];
   addUserComponentRef: BsModalRef;
   // modal config.
@@ -23,7 +24,9 @@ export class DemoComponent implements OnInit{
   constructor(
     private userHttpService: UserHttpService,
     private modalService: BsModalService
-  ){}
+  ) {
+  }
+
   ngOnInit() {
     this.loadUsers();
   }
@@ -36,13 +39,13 @@ export class DemoComponent implements OnInit{
           if (res) {
             this.loadUsers();
           }
-        })
+        });
       }
-    })
+    });
   }
 
-  loadUsers () {
-    this.userHttpService.getAllUsers().subscribe((users : any)=> {
+  loadUsers() {
+    this.userHttpService.getAllUsers().subscribe((users: any) => {
       if (users) {
         this.userList = users;
       }
@@ -50,7 +53,7 @@ export class DemoComponent implements OnInit{
   }
 
   formateDate(timeStamp) {
-    return moment(timeStamp).format("YYYY-MM-DD")
+    return moment(timeStamp).format('YYYY-MM-DD');
   }
 
   removeUser(id) {

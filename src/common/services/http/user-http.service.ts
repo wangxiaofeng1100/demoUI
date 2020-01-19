@@ -3,10 +3,10 @@
  * Author: KSC
  * Copyright (c) 2017 Kingland System Corporation. All Rights Reserved
  */
-import {Url} from "../../constants/url.constant";
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs/internal/Observable";
+import {Url} from '../../constants/url.constant';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/internal/Observable';
 
 @Injectable()
 export class UserHttpService {

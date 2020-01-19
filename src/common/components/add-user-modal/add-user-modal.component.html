@@ -7,12 +7,10 @@
     </div>
     <div class="modal-body">
       <div class="form-group row spbrow data-pointer-row">
-        <div class="col-xs-4">
-          <label class="datafabric-font-style">Username</label>
-        </div>
-        <div class="col-xs-8">
-          <input type="text" class="form-control" [(ngModel)]="newUser.username"/>
-        </div>
+        <span class="ui-float-label">
+          <input id="user-input" type="text" size="30" pInputText class="form-control" [(ngModel)]="newUser.username">
+          <label for="user-input">Username</label>
+        </span>
       </div>
       <div class="form-group row spbrow data-pointer-row">
         <div class="col-xs-4">
@@ -23,12 +21,10 @@
         </div>
       </div>
       <div class="form-group row spbrow data-pointer-row">
-        <div class="col-xs-4">
-          <label class="datafabric-font-style">Description</label>
-        </div>
-        <div class="col-xs-8">
-          <input type="text" class="form-control" [(ngModel)]="newUser.description"/>
-        </div>
+        <span class="ui-float-label">
+          <input id="description-input" type="text" size="30" pInputText class="form-control" [(ngModel)]="newUser.description">
+          <label for="description-input">Description</label>
+        </span>
       </div>
     </div>
     <div class="modal-footer remove-role-confirm-modal">
